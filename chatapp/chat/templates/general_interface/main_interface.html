@@ -1,0 +1,42 @@
+{% extends "base_template.html" %}
+
+{% block general_interface %}
+    {% block confirm_delete %}{% endblock %}
+
+    <div class="row max-width group_container">
+        <div class="col-5 text-center group_col">
+            <a href="{% url 'show_all_contacts' %}">
+                <div class="box_group">
+                    <h3>All Contacts</h3>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-5 text-center group_col">
+            <a href="{% url 'find_all_users' %}">
+                <div class="box_group">
+                    <h3>All Users</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="row max-width group_container">
+        <div class="col-5 text-center group_col">
+            <a href="{% url 'delete_account' %}">
+                <div class="box_group">
+                    <h3>Delete Account</h3>
+                </div>
+            </a>
+        </div>
+        <div class="col-5 text-center group_col">
+            <a href="{% url 'logging_out' %}">
+                <div class="box_group">
+                    <h3>Log-Out</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+
+{% endblock %}
+

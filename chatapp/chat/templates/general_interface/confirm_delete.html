@@ -1,0 +1,20 @@
+{% extends "general_interface/main_interface.html" %}
+
+{% block confirm_delete %}
+
+    <div class="d-flex justify-content-evenly align-items-center max-width" style="background: #395144; height:70px;">
+            <h3 style="color: #fff;">Sure you want to delete your account?</h3>
+            <a href="{% url 'entry_main_interface' %}">
+                <button class="btn btn-light">
+                    Cancel
+                </button>
+            </a>
+            <form method="POST">
+            {% csrf_token %}
+                <button type="submit" class="btn btn-light">
+                    Delete
+                </button>
+            </form>
+    </div>
+{% endblock %}
+

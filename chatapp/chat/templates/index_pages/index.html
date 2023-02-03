@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+    <link type='text/css' rel="stylesheet" href='{% static "css/index.css" %}'/>
+</head>
+<body>
+    <main>
+        <section class="form_section">
+            <div class="div-index">
+                <div class="div-welcome">
+                    <div><h1>Welcome to ChatApp</h1></div>
+                    <div><h2>{% block section %}{% endblock %}</h2></div>
+                </div>
+                <br>
+
+                <div class="div-links">
+                    <div>
+                    <a href="{% url 'index' %}">Log-in</a>
+                    </div>
+                    <div>
+                        <a href="{% url 'signin' %}">Sign-in</a>
+                    </div>
+                </div>
+                <br>
+                <div style="margin: 0 auto; width: 70%; text-align: center;">
+                    {% if msg %}
+                        <h2>{{ msg }}</h2>
+                    {% endif %}
+                </div>
+                <div class="div-welcome form">
+                    <form method="POST">
+                        {% csrf_token %}
+                        <table>
+                            {% block form %} {% endblock %}
+                        </table>
+                        <button class="btn btn-success" type="submit">{% block action %} {% endblock %}</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

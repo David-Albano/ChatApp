@@ -1,0 +1,54 @@
+body {
+    background: #76BA99;
+}
+
+header {
+    border-bottom: solid 3px #fff;
+}
+
+.app_name :hover{
+    color: #000;
+}
+
+main {
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+/* CHAT SECTION*/
+.chat_section {
+    background: #C8DBBE;
+    border-right: solid 2px #fff;
+}
+
+/* MAIN SECTION */
+.main_section {
+    background: #76BA99;
+}
+
+    .main_section .group_container {
+        margin-top: 100px;
+        height: 220px;
+    }
+
+    .main_section .group_col {
+        background: #F0EBCE;
+        width: 16%;
+        height: 100%;
+        margin: 0 auto;
+        border-radius: 10px;
+        box-shadow: -2px -2px 18px #3C2317;
+    }
+
+        .main_section .group_col :hover{
+            transform: scale(1.03);
+        }
+
+        .main_section .group_col a {
+                text-decoration: none;
+            }
+
+        .main_section .group_col h3 {
+            color: #395144;
+            margin-top: 40%;
+        }

@@ -1,0 +1,40 @@
+{% extends "general_interface/main_interface.html" %}
+
+{% block title %}Users{% endblock %}
+
+{% block general_interface %}
+    <section style="margin: 0 auto; margin-top: 40px; width: 80%;">
+
+        <h1>All Users</h1>
+
+        <div style="margin-top: 20px;">
+            <h3>{{ msg }}</h3>
+        </div>
+        <br>
+            {% if all_users %}
+                {% for user in all_users %}
+                    <div class="d-flex">
+                        <div style="width: 200px;">
+                            <h3>{{ user.username }}</h3>
+                        </div>
+                        <div style="margin-left: 20px;">
+                            <form action="{% url 'add_contact_from_all' username=user.username %}" method="POST">
+                                {% csrf_token %}
+                                {% if user.own_username %}
+                                    <span></span>
+                                {% elif not user.contact %}
+                                    <button class="btn btn-success">Add</button>
+                                {% elif user.contact and not user.own_username %}
+                                    <button class="btn btn-secondary" disabled>Contact</button>
+                                {% endif %}
+                            </form>
+                        </div>
+                    </div>
+                    <div>
+                        <h5>{{ user.email }}</h5>
+                    </div>
+                    <br>
+                {% endfor %}
+            {% endif %}
+    </section>
+{% endblock %}

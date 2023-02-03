@@ -1,0 +1,42 @@
+{% extends "general_interface/main_interface.html" %}
+
+{% block title %}Contacts{% endblock %}
+
+{% block general_interface %}
+    <section style="margin: 0 auto; margin-top: 40px; width: 80%;">
+        <div style="margin-bottom: 50px;">
+            <a href="{% url 'add_contact' %}">
+                <button class="btn btn-success">Add New Contact</button>
+            </a>
+        </div>
+
+        <h1>{{ msg }}</h1>
+
+        {% for contact in contacts %}
+                <div class="d-flex" style="margin-top: 30px;">
+                    <div  style="width: 200px;">
+                        <h3>{{ contact.username }}</h3>
+                        <input value="{{ contact.username }}" style="display: none;" name="username">
+                    </div>
+                    <div>
+                        <form action="{% url 'chat_room' username=contact.username %}" method="POST">
+                        {% csrf_token %}
+                            <button class="btn btn-primary" style="margin-left: 30px;" title="Send Message"><i class="fa-regular fa-comment-dots" style="transform: scale(1.7);"></i></button>
+                        </form>
+                    </div>
+                    <div>
+                        <form method="POST">
+                        {% csrf_token %}
+                            <button type="submit" class="btn btn-danger" style="background: #FF0032; margin-left: 15px;" title="Delete contact"><i class="fa-regular fa-trash-can" style="transform: scale(1.7);"></i></button>
+                        </form>
+                    </div>
+                    {% if not contact.exist %}
+                        <div>
+                            <button class="btn btn-secondary" style="margin-left: 30px;" disabled>Non-existent</button>
+                        </div>
+                    {% endif %}
+                </div>
+            <br>
+        {% endfor %}
+    </section>
+{% endblock %}

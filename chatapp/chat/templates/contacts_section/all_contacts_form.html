@@ -1,0 +1,21 @@
+{% extends "general_interface/main_interface.html" %}
+
+{% block title %}Add Contacts{% endblock %}
+
+{% block general_interface %}
+    <section style="margin: 0 auto; margin-top: 40px; width: 80%;">
+        <form method="POST">
+            {% csrf_token %}
+            <div class="d-block">
+                {{ form_contact }}
+            </div>
+            <div>
+                <button type="submit" class="btn btn-success">Add</button>
+            </div>
+        </form>
+
+        {% if msg %}
+          <h3>{{ msg }}</h3>
+        {% endif %}
+    </section>
+{% endblock %}

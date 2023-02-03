@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <h2 style="color: #395144; margin-bottom: 30px; margin-top: 10px;">Chats: {{ num_chats }}</h2>
+    </div>
+{% if all_conversations %}
+    {% for conversations in all_conversations %}
+        <div style="
+            background: #76BA99;
+            min-height: 7rem;
+            width: 100%;
+            padding: 5px;
+            border-radius: 5px;
+            margin-top: 10px;
+        ">
+            <form action="{% url 'go_to_chat' %}" method="POST">
+                {% csrf_token %}
+                <input type="hidden" name="user_conversation" id="user_conversation" value="{{conversations.user_conversation}}"/>
+                <input type="hidden" name="id_chat" id="id_chat" value="{{conversations.id_conversation}}"/>
+                <button  type="submit" class="btn btn-primary" style="
+                                                                   min-width: 100%;
+                                                                   min-height: 3rem;
+                                                                   font-size: 25px;
+                                                                    " title="Go into chat">
+                    <b>{{ conversations.user_conversation }}</b><i class="fa-regular fa-comment-dots" style="margin-left: 10px; transform: scale(1.2);"></i></button>
+            </form>
+            <form action="{% url 'delete_chat' %}" method="POST">
+                {% csrf_token %}
+                <input type="hidden" name="id_conversation" id="id_conversation" value="{{conversations.id_conversation}}"/>
+                <button  type="submit" class="btn btn-danger" style="background: #FF0032;
+                                                                   min-width: 100%;
+                                                                   min-height: 2rem;
+                                                                   margin-top: 10px;
+                                                                   font-size: 20px;
+                                                                    " title="Delete chat">
+                    <b>Delete</b><i class="fa-regular fa-trash-can" style="margin-left: 10px; transform: scale(1.3);"></i></button>
+            </form>
+        </div>
+    {% endfor %}
+{% endif %}
+</body>
+</html>
