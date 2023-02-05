@@ -26,6 +26,6 @@ class AddContactForm(forms.Form):
         widget=forms.TextInput(attrs={'readonly': True}),
         max_length=255)
     contact2 = forms.CharField(
-        label='Contact Nº1',
+        label='Contact Nº2',
         widget=forms.TextInput(attrs={'placeholder': 'Enter the username you wanna add'}),
         max_length=255)
