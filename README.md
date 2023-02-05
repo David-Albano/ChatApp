@@ -36,6 +36,7 @@ Este proyecto es una aplicación de chat en tiempo real que permite a los usuari
 
 - Accede a http://127.0.0.1:8000/ en tu navegador para iniciar sesión o registrarte como usuario de la aplicación.
 - Una vez registrado, puedes ver tus contactos, agregar nuevos contactos, iniciar conversaciones y más.
+- Abre una ventana de incógnito del navegador accediendo al mismo servidor local, crea un usuário, inicia sesión, agrega el contacto con el que hayas iniciado sesión anteriormente e inicia una conversación a tiempo real.
 
 **Consideraciones**
 
@@ -43,3 +44,7 @@ Este proyecto es una aplicación de chat en tiempo real que permite a los usuari
 - La funcionalidad de mensajería en tiempo real es implementada con JavaScript y AJAX.
 - Se recomienda tener conocimientos básicos en Python, Django, JavaScript y AJAX antes de modificar este proyecto.
 - El diseño no es responsive
+
+Super usuário: 
+username: admin.chat
+password: adminchat
