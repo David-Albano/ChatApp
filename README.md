@@ -1,45 +1,50 @@
-## APP DE CHAT CON DJANGO Y JAVASCRIPT
+## CHAT APP WITH DJANGO AND JAVASCRIPT
 
-Este proyecto es una aplicación de chat en tiempo real que permite a los usuarios registrarse y conectarse con otros usuarios de la aplicación. Utiliza las tecnologías de Python, Django, JavaScript, AJAX y está conectado a una base de datos PostgreSQL.
+This project is a real-time chat application that allows users to register and connect with other users of the application. It uses Python, Django, JavaScript, AJAX technologies and is connected to a PostgreSQL database.
 
-### Funcionalidades
+### Features
 
-- Registro e inicio de sesión como usuario de la aplicación
-- Ver contactos
-- Agregar nuevos contactos
-- Buscar contactos por filtro
-- Ver todos los usuarios de la aplicación
-- Eliminar contactos
-- Eliminar cuenta propia
-- Acceder/crear nueva conversación
-- Agregar contacto a la conversación si aún no es un contacto
-- Eliminar conversación (esto eliminará automáticamente todos los mensajes en la base de datos)
+- Registration and login as a user of the application
+- View contacts
+- Add new contacts
+- Search contacts by filter
+- View all app users
+- Delete contacts
+- Delete own account
+- Access/create new conversation
+- Add contact to conversation if not already a contact
+- Delete conversation (this will automatically delete all messages in the database)
 
-**TecnologíAs Utilizadas**
+**Used technologies**
 
 - Python
-- Django
+- django
 - JavaScript
 - AJAX
 - PostgreSQL
 
-**Instalación y configuración**
+**Installation and configuration**
 
-- Instalar Python y Django en tu equipo siguiendo los pasos en la documentación oficial.
-- Instalar PostgreSQL (o el sistema de gestión que desee utilizar) y crear una base de datos para la aplicación. 
-- Clonar este repositorio en tu equipo y acceder al directorio de la aplicación.
-- Configurar la conexión a la base de datos en el archivo settings.py de Django.
-- Ejecutar python manage.py makemigrations y python manage.py migrate para aplicar las migraciones a la base de datos.
-- Ejecutar python manage.py runserver para iniciar el servidor de desarrollo.
+- Install Python and Django on your computer by following the steps in the official documentation.
+- Install PostgreSQL (or the management system you want to use) and create a database for the application.
+- Clone this repository on your computer and access the application directory.
+- Configure the connection to the database in Django's settings.py file.
+- Run python manage.py makemigrations and python manage.py migrate to apply the migrations to the database.
+- Run python manage.py runserver to start the development server.
 
-**Uso**
+**Use**
 
-- Accede a http://127.0.0.1:8000/ en tu navegador para iniciar sesión o registrarte como usuario de la aplicación.
-- Una vez registrado, puedes ver tus contactos, agregar nuevos contactos, iniciar conversaciones y más.
+- Access http://127.0.0.1:8000/ in your browser to log in or register as a user of the application.
+- Once registered, you can view your contacts, add new contacts, start conversations and more.
+- Open an incognito window of the browser accessing the same local server, create a user, log in, add the contact with whom you have previously logged in and start a conversation in real time.
 
-**Consideraciones**
+**Considerations**
 
-- Este proyecto es solo una base para una aplicación de chat y puede ser modificado y mejorado según las necesidades del usuario.
-- La funcionalidad de mensajería en tiempo real es implementada con JavaScript y AJAX.
-- Se recomienda tener conocimientos básicos en Python, Django, JavaScript y AJAX antes de modificar este proyecto.
-- El diseño no es responsive
+- This project is just a base for a chat application and can be modified and improved according to the user's needs.
+- The real-time messaging functionality is implemented with JavaScript and AJAX.
+- It is recommended to have a basic knowledge of Python, Django, JavaScript and AJAX before modifying this project.
+- The design is not responsive
+
+Super user:
+username: admin.chat
+password: adminchat
