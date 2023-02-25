@@ -15,7 +15,7 @@ This project is a real-time chat application that allows users to register and c
 - Add contact to conversation if not already a contact
 - Delete conversation (this will automatically delete all messages in the database)
 
-**Used technology**
+**Used technologies**
 
 - Python
 - django
