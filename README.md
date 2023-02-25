@@ -17,10 +17,10 @@ This project is a real-time chat application that allows users to register and c
 
 **Used technology**
 
--Python
--django
--JavaScript
--AJAX
+- Python
+- django
+- JavaScript
+- AJAX
 - PostgreSQL
 
 **Installation and configuration**
