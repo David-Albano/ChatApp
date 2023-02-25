@@ -2,7 +2,7 @@
 
 <hr/>
 
-![](./previews/preview1.png)
+![](./previews/previews1.png)
 
 This project is a real-time chat application that allows users to register and connect with other users of the application. It uses Python, Django, JavaScript, AJAX technologies and is connected to a PostgreSQL database.
 
